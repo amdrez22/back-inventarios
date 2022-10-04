@@ -115,6 +115,40 @@ const deleteInventarioByID = async (req = request,
     res = response) => {
 
     try{
+        const id = req.params.id
+        const data = await Inventario.findById(id)
+        if(!data){
+            return res.status(404).json({msj: 'No existe inventario'})
+        }
+        await Inventario.findByIdAndDelete(id)
+        return res.status(204).json({})
+    }catch(e){
+        console.log(e)
+        return res.status(500).json({msj: 'Error'}) 
+    }
+
+}
+/*
+const deleteMarcaByID = async (req = request, 
+    res = response) => {
+        try{
+            const id = req.params.id
+            const marcaBD = await Marca.findById(id)
+            if(!marcaBD){
+                return res.status(404).json({msj: 'No existe marca'})
+            }
+            await Marca.findByIdAndDelete(id)
+            return res.status(204).json({})
+        }catch(e){
+            return res.status(500).json({msj: e})
+        }
+}
+*/
+/*
+const deleteInventarioByID = async (req = request, 
+    res = response) => {
+
+    try{
         const { id } = req.params
         const data = req.body
         await Inventario.findByIdAndDelete(id, data, {new: true})
@@ -125,8 +159,7 @@ const deleteInventarioByID = async (req = request,
     }
 
 }
-
-
+*/
 /**
  * Subir foto por ID
  */

@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const UsuarioSchema = Schema({
     nombre: {
         type: String,
-        required: [true, 'Nombre estado requerido']
+        required: [true, 'Nombre usuario requerido']
     },
     email: {
         type: String,
