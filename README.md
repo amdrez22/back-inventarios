@@ -1,7 +1,7 @@
 # back-inventarios
 
 ## clonar el repo
-git clone https://github.com/julioiud/back-inventarios.git
+git clone https://github.com/amdrez22/back-inventarios.git
 
 ## instalar
 cd back-inventarios
