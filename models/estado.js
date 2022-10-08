@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 const EstadoSchema = Schema({
     nombre: {
         type: String,

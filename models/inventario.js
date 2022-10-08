@@ -3,12 +3,12 @@ const { Schema, model } = require("mongoose");
 const InventarioSchema = Schema({
     serial: {
         type: String,
-        required: [true, 'Serial requerido'],
-        unique: [true, 'Equipo en uso']
+        required: [true, 'serial requerido'],
+        unique: [true, 'equipo en uso']
     },
     modelo:{
         type: String,
-        required:  [true, 'Modelo requerido']
+        required:  [true, 'modelo requerido']
     },
     descripcion:{
         type: String
